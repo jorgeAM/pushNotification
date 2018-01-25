@@ -21,10 +21,12 @@ export class PushNotificationProvider {
       this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
       this.oneSignal.handleNotificationReceived().subscribe(() => {
        // do something when notification is received
+      console.log('mensaje recibido');
       });
 
       this.oneSignal.handleNotificationOpened().subscribe(() => {
         // do something when a notification is opened
+        console.log('mensaje abierto');
       });
 
       this.oneSignal.endInit();
